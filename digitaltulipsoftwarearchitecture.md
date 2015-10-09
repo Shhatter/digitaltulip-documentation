@@ -1,25 +1,39 @@
-Introduction
+#Introduction
+
 The objective of this document is to describe at both a high level and detailed level the solution design currently employed with DigitalTulip. This not only covers the key software components, but also describes the development and deployment methodologies and should act as a one stop shop to enable people to pick up key concepts quickly and be productive from a development perspective in a short space of time.
-Background
+
+#Background
+
 Digital Tulip was initiated as a Proof of Concept off the back of the successful myCloud and service optimisations projects at Pearson. The primary motivation for the Pearson project initially was to move the organisation away from the traditional on-premise Microsoft Messaging and Collaboration services, but to also revolutionise the way their organisation worked. A phrase coined by Pearson was "Martini working". This was the idea of working anywhere, any device and at any time.
+
 The initial discovery phase of the project identified some key themes. These themes comprise the cornerstone of the DigitalTulip proposition.
+
 Identity and Access Management is paramout to successful Cloud adoption. Single identity and therefore single sign on, user provisioning, password resets and deprovisioning are an absolute must. Without these expect spiralling license costs, poor consumer adoption, poor user experience and consequently poor productivity
+
 There needs to be a common entry point to access all cloud services. This needs to be available through any device and at any time. It is simple in nature, but necessary when providing access to multiple cloud services. 
+
 Cloud Services are wide and varied, expect them to change frequently and sometimes without warning. All integration therefore could become redundant overnight. This is an important caveat of everything that is done and when offering integration services should be explained to the customer
+
 Finally and most importantly, the business change process for cloud adoption is massive. The technology can reduce some of these barriers, but the way people work is fundamentally shifting. Without relevant communication, support and service management strategies employed, it will be a painful and resistant migration.
  
-Solution Overview
+#Solution Overview
+
 Given the background as well as lessons learnt from Pearson. The initial objective was to try and demonstrate a mechanism of consuming cloud services such as Google, Office 365 and ServiceNow in a manner that would promote consumer adoption. To that end, a web portal was designed presenting a user with their available applications. This was backed with an Identity and Access Management product that delivered Single Sign On to the Portal as well as the external Cloud Services (Google Apps for Works, Office 365, ServiceNow). The illustration depicts those components and their interactions. 
  
  
 The intent here is to ensure the consumer experiences cloud services in the least disruptive manner possible. Each cloud service needs its own identity, that is a given and necessary element of consuming SaaS products. However, what DigitalTulip is trying to do here is keep that hidden from the end user. Although there is a lot of engineering being performed in the background, the end user will only be prompted for one set of credentials, irrespective of which cloud service they choose to consume.
-Component Design
+
+#Component Design
+
 This sections take the components in turn describing additional detail around their implementation and composition.
 Consumer Portal
+
 As the Enterprise changes and migrates to becoming cloud native, it is difficult to imagine an end user managing and remembering all the URLs she must connect to through their day. The objective of the portal is to provide a way the end consumer can access a central point to access other cloud services. This is analogous to a Mobile Phone home screen. It is of course possible to enrich the content of the Portal to become Enterprise specific and within the DigitalTulip demonstration there is the consumption of external data sources. The expectation is for this to be bespoke development for each client, but with a core principal of providing access to relevant applications.
+
 The portal is a single page web application. It is an angularjs front that communicates via Rest HTTP calls to an Express back end running within NodeJS process. This is a mongodb solution, although the information stored within Mongo is very small. Namely some information about each of the application that needs displaying, plus some information about the user, namely which graphic to display. There are two more points worthy of a mention. Each user is presented with a different set of applications based on Authorisation rules. The Authorisation detail can be found in the IAM section, but suffice to say the Authorisation information is retrieved via an external REST call. The final point to touch on is that the Portal itself is secured using passport-saml
  
 The sequence diagram below confirms the data flow when a user first requests the portal page, to further illustrate the interactions between the various components.
+
 User requests the portal page
 The passport-saml validates if a user is authenticated or not
 This user is not authenticated and therefore they get redirected to the IAM Logon page
