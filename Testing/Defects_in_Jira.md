@@ -1,6 +1,6 @@
 # Defect Management in Jira
 
-# Step by Step guide
+# A Step by step guide
 
 1. Issues for testing are those included in the Testing swim lane of the scrum board in JIRA
 
