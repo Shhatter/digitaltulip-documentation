@@ -4,7 +4,7 @@
 
 1. Issues for testing are those included in the Testing swim lane of the scrum board in JIRA
 
-![alt text](Images/jiratest.png)
+![alt text](/Images/jiratest.png)
 
 2. If a test has passed
         Record the results as a comment, attach screenshot or other attachment if appropriate
