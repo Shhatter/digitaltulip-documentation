@@ -5,6 +5,8 @@
 * Introduction
 * Prerequisites
 * Template
+* Javascript code
+* Enabling Directive
 * MHub Screencast
 
 # Introduction
@@ -26,7 +28,25 @@ The HTML code sits in the client > templates > views > mobile folder.
 
 ![alt text](/Images/template.png)
 
-Please finish...
+# Javascript code
+
+All javascript code for directives sits in  client > js > directives
+
+![alt text](/Images/directive.png)
+
+# Enabling Directives
+
+In order to make the Directive active, a variable needs to be assigned for the directive in app.js. The location of this file is client > js
+
+![alt text](/Images/app.png) 
+
+Then the parameters need to be assigned to the Directive.
+
+![alt text](/Images/appdirective.png) 
+
+One this is done, simply add a tag with the directive name into an existing page. 
+
+![alt text](/Images/directivetag.png) 
 
 # Mhub Screencast
 
