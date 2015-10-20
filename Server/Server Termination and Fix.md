@@ -1,7 +1,5 @@
 # Simulating a server termination and fixing it
 
-# A Step by step guide
-
 A sever can shut down for a variety of reason. Previously a manual rebuild would be reqiuired to overcome this. This is not only an extremely laborious process, but not feasible in an Agile working enviornment. Automation has become a huge player in the Technical world, and is enouraged throughout the delivery of any IT solution. 
 
 Automation allows for the rebuilding of servers over and over again at the click of a button. The following walkthrough discusses the process required to terminate servers on AWS and rebuild them using a Team City task. A screencast is also provided to demo this in action.   
