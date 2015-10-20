@@ -21,4 +21,4 @@ The following must first be satisfied before proceeding -
 
 # MHub screencast
 
-[View screencast on Mhub]()
+[View screencast 3 on Mhub](http://link.mhub.tv/?t=RjYbla)

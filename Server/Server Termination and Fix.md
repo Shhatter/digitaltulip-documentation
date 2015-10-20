@@ -14,4 +14,4 @@ Automation allows for the rebuilding of servers over and over again at the click
 8. Trigger step 2 - Deploy Our Code
 9. Trigger step 3 - Test Our Code
 
-[View screencast](https://digitaltulip.atlassian.net/wiki/pages/viewpage.action?pageId=13074437) to see a working demo.
+[View screencast 4 on MHub](http://link.mhub.tv/?t=RjYbla) to see a working demo.
