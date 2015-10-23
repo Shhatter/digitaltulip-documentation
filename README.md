@@ -14,7 +14,7 @@ Digital Tulip was a program of work started back in February of 2015 to demonstr
 ###Architecture
 
 1. [Digital Tulip Software Architecture](/Architecture/digitaltulipsoftwarearchitecture.md)
-2. [Digital Consumer experience Software Architecture](/Architecture/dcxsoftwarearchtecture.md)
+2. [Digital Consumer experience Software Architecture](/Architecture/dcxsoftwarearchitecture.md)
 
 ###Client
 
