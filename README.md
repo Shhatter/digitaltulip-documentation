@@ -13,18 +13,26 @@ Digital Tulip was a program of work started back in February of 2015 to demonstr
 
 ###Architecture
 
+Provides both High and Detailed level Architecture for the Digital Tulip solution.
+
 1. [Digital Tulip Software Architecture](/Architecture/digitaltulipsoftwarearchitecture.md)
 2. [Digital Consumer experience Software Architecture](/Architecture/dcxsoftwarearchitecture.md)
 
 ###Client
 
+Discusses any client side related development. 
+
 1. [Create a new Directive](/Client/Create a Directive.md)
 
 ###Server
 
+Discusses any server side related development. 
+
 1. [Terminating a server and fixing it](/Server/Server Termination and Fix.md)
 
 ###Testing
+
+Provides information for all types of Testing carried out.
 
 1. [Managing Defects in Jira](/Testing/Defects_in_Jira.md)
 2. [Unit Testing](/Testing/JUnit_Testing.md)
