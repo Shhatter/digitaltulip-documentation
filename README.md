@@ -11,5 +11,21 @@ Digital Tulip was a program of work started back in February of 2015 to demonstr
 
 ##Document Links
 
-[Digital Tulip Software Architecture](digitaltulipsoftwarearchitecture.md)
-[Digital Consumer eXperience Software Architecture](dcxsoftwarearchtecture.md)
+###Architecture
+
+1. [Digital Tulip Software Architecture](/Architecture/digitaltulipsoftwarearchitecture.md)
+2. [Digital Consumer experience Software Architecture](/Architecture/dcxsoftwarearchtecture.md)
+
+###Client
+
+1. [Create a new Directive](/Client/Create a Directive.md)
+
+###Server
+
+1. [Terminating a server and fixing it](/Server/Server Termination and Fix.md)
+
+###Testing
+
+1. [Managing Defects in Jira](/Testing/Defects_in_Jira.md)
+2. [Unit Testing](/Testing/JUnit_Testing.md)
+3. [UI Testing](/Testing/UI Testing.md)
