@@ -12,7 +12,7 @@
 
 In the Agile age of Software delivery, Test Automation is becoming more of a necessity than a luxary. The complexity of Software is making Manual Testing much too time consuming and costly. In response to this, Digital Tulip has taken an Automation approach to UI testing. 
 
-UI tests use Selenium as it's foundation. However framworks such as Mocha and Phantom are also intregrated to enhance Testing quality. Phantom allows the UI tests to be added to the Team City build. 
+UI tests use Selenium as it's foundation. However framworks such as Protractor, Mocha and Phantom are also intregrated to enhance Testing quality. Phantom allows the UI tests to be added to the Team City build. Protactor is used to Test AngularJS functionality and improve the Test consistency. 
 
 # Prerequisites
 
@@ -21,7 +21,7 @@ Before continuing, the following prerequisits must be met -
 1. fip_banking_node project cloned with repository permissions.
 2. Team City account with access to Digital Tulip tasks.
 3. Mongo DB and git.
-3. Sound knowlege of Selenium, Mocha, Phantom and UI Test Automation in general.
+3. Sound knowlege of Selenium, Protractor, Mocha, Phantom and UI Test Automation in general.
 
 # What makes a good UI test
 
@@ -47,29 +47,21 @@ Does the screen size change for mobile viewing ?
 
 # Creating and running tests.
 
-UI Tests are located in test > selenium-tests path of fip_banking_node project.
+UI Tests are now located in test > protractor path of fip_banking_node project.
 
-![alt text](/Images/seleniumtests.png) 
+![alt text](/Images/protractortests.png) 
 
 Look at existing tests to see examples of tests and the corrosponding syntax.
 
 ![alt text](/Images/syntax.png) 
 
-Before running a test locally, check to see which enivornment it is running on. The "env" variable determines this. The below example is set to be executed on the local host. Navgivate to server > config > config path to see alternatives. 
-
-![alt text](/Images/env.png) 
-
-![alt text](/Images/config.png) 
-
-To run a test, open up a shell (git bash is recommended) and navigate to selenium-tests folder. 
+To run a test, open up a shell (git bash is recommended) and navigate to protractor folder. Ensure that gulp and mongod are running in other shells. 
 
 ![alt text](/Images/gitbash.png)
 
-Execute mocha test name.js. Test will be executed and result will be displayed in shell. Passed tests will be displayed as green and failed ones will display as red.  
+Execute the command *NODE_ENV=local protractor conf.js*. This will execute the enite test suite. Test results will be displayed in shell.
 
 ![alt text](/Images/runtest.png)
-
-Remember that tests must be run using Phantom when added to the Team City build. 
 
 # Screencast
 
