@@ -1,18 +1,18 @@
 #Contents
 
-1. Introduction
-2. Background
-3. Solution Overview
-4. Component Design 
-..1. Comsumer Portal
-..2. Authorisation
-..3. Identity Synchronisation
-..4. Architectural Considerations
-..5. Identity Synchronisation
-..6. Development Approach and Deployment
-..7. DevOps
-..8. Deployment
-..9. Continuous Delivery
+* Introduction
+* Background
+* Solution Overview
+* Component Design 
+..* Comsumer Portal
+..* Authorisation
+..* Identity Synchronisation
+..* Architectural Considerations
+..* Identity Synchronisation
+..* Development Approach and Deployment
+..* DevOps
+..* Deployment
+..* Continuous Delivery
 
 #Introduction
 
