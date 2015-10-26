@@ -1,3 +1,19 @@
+#Contents
+
+1. Introduction
+2. Background
+3. Solution Overview
+4. Component Design 
+..1. Comsumer Portal
+..2. Authorisation
+..3. Identity Synchronisation
+..4. Architectural Considerations
+..5. Identity Synchronisation
+..6. Development Approach and Deployment
+..7. DevOps
+..8. Deployment
+..9. Continuous Delivery
+
 #Introduction
 
 The objective of this document is to describe at both a high level and detailed level the solution design currently employed with DigitalTulip. This not only covers the key software components, but also describes the development and deployment methodologies and should act as a one stop shop to enable people to pick up key concepts quickly and be productive from a development perspective in a short space of time.
@@ -101,7 +117,8 @@ Jenny Bates's screen looks like the following based on the authorisations above,
 
 ![alt text](/Images/JennysScreen.png)
 
-Identity Synchronisation
+##Identity Synchronisation
+
 The final piece in the jigsaw with regards to Identity and Access Management for Digital Tulip relates to Identity synchronisation. Earlier in this section we established that without synchronised Identity, Single Sign On would be impossible. The synchronisation implemented for Digital Tulip is tactical to establish a working demonstration for 3 cloud providers namely Google Apps for Works, Office 365 and ServiceNow. Firstly we shall cover what is currently deployed. The next section will cover a potential strategic implementation that covers some of the onboarding and offboarding requirements. 
 The diagram below illustrates how the 3 cloud providers are currently kept in synchronisation.
  
@@ -143,11 +160,16 @@ All source code be it application code or infrastructure build code reside insid
 ## Deployment
 
 Deployment of this environment is all achieved through TeamCity which is predominately a Continuous Integration server. Essentially however it is a way of controlling scripts and their triggers and reduces the need for sysadmins to connect to remote servers and perform admin tasks. The jobs for each environment looks like this. Each job represents an ansible command similar to this
-ansible-playbook -i plugins/inventory main.yml --extra-vars "env=dev" --vault-password-file ~/.vault_pass.txt
+
+*ansible-playbook -i plugins/inventory main.yml --extra-vars "env=dev" --vault-password-file ~/.vault_pass.txt*
+
 It is beyond the scope of this document to explain each playbook as that is best done by looking at the source. However, it is worth a mention that each playbook takes an argument of type env which will mean the environment will be referred to as env.digitaltulip.net also there is a supplied password file on the TeamCity server. This is used to decrypt the enc.yml files within the playbooks that store password related information.
 
+![alt text](/Images/TeamCity.png)
+
 The order above is alphabetical and does not represent the logical order in which to execute tasks. That is described below, but before describing that, it is worth spending a moment detailing what the infrastructure looks like within AWS.
- 
+
+![alt text](/Images/Infastructure.png)
  
 What the diagram is trying to illustrate is that all deployment and management work is performed by the TeamCity server. The TeamCity server sits on the public internet but when an environment is created is granted network access to a Jump Server or a Bastion Host. It then executes all ansible commands via that host, thereby reducing the risk vector. For completeness, the Teamcity jobs perform the following tasks
 TeamCity Job
@@ -161,13 +183,20 @@ Deploy IAM Linux    Configures the HAProxy Server as well as all the components 
 Deploy IAM Windows  Creates a new AD Forest on the Windows Domain Controller and also creates a set of test users
 Deploy Portal   Installs the node and mongo components on the Portal Server. Also performs the data migration needed for the portal database
 Given that end state, to achieve it the following Teamcity tasks need to be run in the order below. At the end of which should be a functioning DigitalTulip environment
+
+![alt text](/Images/DeploymentFlow.png)
  
 This is predominately an automated process. However, there needs to be a single manual step after deployment for SSO to function. The administrator needs to log onto http://iam.{{env}}.digitaltulip.net/openam and navigate to the User Data store for Active Directory, the page should look like this
 
+![alt text](/Images/ActiveDirectory.png)
  
 Ticking the load schema box and pressing save with update ActiveDirectory with a schema change and enable SSO.
- 
-Continuous Delivery
+
+##Continuous Delivery
+
 The strong focus on ansible and making the software components deployable means that Continuous Delivery is within reach. The time constraints of the project did not permit this to be realised, but the component parts are most definitely available. The effort would be to try and stitch them together in a way that makes sense. 
 Gliffy DiagramEditFullscreenCDPipeline 
+
+![alt text](/Images/CDPipline.png)
+
 The flow above would be a starting point. The boxes marked in green are currently implemented. The orange box have been partially implemented and the red boxes need understanding and implementing. 
