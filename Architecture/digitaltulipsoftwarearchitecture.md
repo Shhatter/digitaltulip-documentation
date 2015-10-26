@@ -20,7 +20,7 @@ Finally and most importantly, the business change process for cloud adoption is 
 
 Given the background as well as lessons learnt from Pearson. The initial objective was to try and demonstrate a mechanism of consuming cloud services such as Google, Office 365 and ServiceNow in a manner that would promote consumer adoption. To that end, a web portal was designed presenting a user with their available applications. This was backed with an Identity and Access Management product that delivered Single Sign On to the Portal as well as the external Cloud Services (Google Apps for Works, Office 365, ServiceNow). The illustration depicts those components and their interactions. 
 
-[High Level Interaction Diagram](/Architecture/HighLevelInteractionDiagram.md)
+[High Level Interaction Diagram](/Images/HighLevelInteractionDiagram.md)
  
 The intent here is to ensure the consumer experiences cloud services in the least disruptive manner possible. Each cloud service needs its own identity, that is a given and necessary element of consuming SaaS products. However, what DigitalTulip is trying to do here is keep that hidden from the end user. Although there is a lot of engineering being performed in the background, the end user will only be prompted for one set of credentials, irrespective of which cloud service they choose to consume.
 
