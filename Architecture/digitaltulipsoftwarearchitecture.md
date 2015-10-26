@@ -131,20 +131,17 @@ The previous sections should give a reasonable introduction into what has been d
 The approach adopted by the project was very DevOps based. Given the nature of what was happening, it was important to be able to deploy this solution into multiple environments. Rather than using a traditional approach of development software locally, then worrying about how it is deployed and configured later. We put the deployment first and ensured there was a reliable deployment pipeline before pressing on with too much functionality. The upshot is that a new deployed environment can be created in AWS within an hour. A technology has been used which means it can be ported to other IaaS providers without only a small amount of change.
 The technology set used to facilitate this is ansible. This is an agentless automation tool that works across linux and windows based environments. As the project required infrastructure quickly, it made sense to consume Amazon Web Services. The ansible scripts that have been developed will create an environment, deploy the core components and then configure them to deliver a workable environment.
 All source code be it application code or infrastructure build code reside inside a github repository. The specific repositories are detailed below
-Repository Name
-Location
-Purpose
-digitaltulip-aws
-https://github.com/atosorigin/digitaltulip-aws  Contains ansible scripts to provision a brand new digital tulip environment within Amazon Web Services
-digitaltulip-iam-linux
-https://github.com/atosorigin/digitaltulip-iam-linux    Holds ansible scripts to deploy Forgerock's IAM solution, specifically concentrating on the Linux components openAM, openDJ, openIG and openIDM as well as HAProxy
-digitaltulip-iam-windows
-https://github.com/atosorigin/digitaltulip-iam-windows  Contains the ansible scripts to deploy the windows Active Directory server as well as the ServiceNow Mid Server
-digitaltulip-portal
-https://github.com/atosorigin/digitaltulip-portal   This holds the application code for the consumer portal as well as the deployment code for it too.
-digitaltulip-test
-https://github.com/atosorigin/digitaltulip-test Here are a number of selenium test scripts that exercise the functionality of the portal and its constituent parts
-Deployment
+
+| Respository Name         | Location                                               | Purpose            |
+| ------------------------ |:------------------------------------------------------:| ------------------:|
+| digitaltulip-aws         | https://github.com/atosorigin/digitaltulip-aws | Contains ansible scripts to provision a brand new digital tulip environment within Amazon Web Services
+| digitaltulip-iam-linux   | https://github.com/atosorigin/digitaltulip-iam-linux   | Holds ansible scripts to deploy Forgerock's IAM solution, specifically concentrating on the Linux components openAM, openDJ, openIG and openIDM as well as HAProxy
+| digitaltulip-iam-windows | https://github.com/atosorigin/digitaltulip-iam-windows | Contains the ansible scripts to deploy the windows Active Directory server as well as the ServiceNow Mid Server|
+| digitaltulip-portal      | https://github.com/atosorigin/digitaltulip-portal      | This holds the application code for the consumer portal as well as the deployment code for it too. |
+| digitaltulip-test        | https://github.com/atosorigin/digitaltulip-test        | Here are a number of selenium test scripts that exercise the functionality of the portal and its constituent parts |
+
+## Deployment
+
 Deployment of this environment is all achieved through TeamCity which is predominately a Continuous Integration server. Essentially however it is a way of controlling scripts and their triggers and reduces the need for sysadmins to connect to remote servers and perform admin tasks. The jobs for each environment looks like this. Each job represents an ansible command similar to this
 ansible-playbook -i plugins/inventory main.yml --extra-vars "env=dev" --vault-password-file ~/.vault_pass.txt
 It is beyond the scope of this document to explain each playbook as that is best done by looking at the source. However, it is worth a mention that each playbook takes an argument of type env which will mean the environment will be referred to as env.digitaltulip.net also there is a supplied password file on the TeamCity server. This is used to decrypt the enc.yml files within the playbooks that store password related information.
