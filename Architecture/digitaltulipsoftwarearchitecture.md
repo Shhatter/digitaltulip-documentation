@@ -4,15 +4,6 @@
 * Background
 * Solution Overview
 * Component Design 
-..* Comsumer Portal
-..* Authorisation
-..* Identity Synchronisation
-..* Architectural Considerations
-..* Identity Synchronisation
-..* Development Approach and Deployment
-..* DevOps
-..* Deployment
-..* Continuous Delivery
 
 #Introduction
 
@@ -182,6 +173,19 @@ Create Test User    Creates a set of 6 users for test purposes.
 Deploy IAM Linux    Configures the HAProxy Server as well as all the components on the IAM Server.
 Deploy IAM Windows  Creates a new AD Forest on the Windows Domain Controller and also creates a set of test users
 Deploy Portal   Installs the node and mongo components on the Portal Server. Also performs the data migration needed for the portal database
+
+| TeamCity Job         | Task                                                   | 
+| ---------------------|:------------------------------------------------------:|
+| AWS Dependency Setup | Once an environment has been established, will deploy ssh authorised keys onto each server as well as ensure the localhost file is populated to allow name resolution in the absence of a DNS solution.         | 
+| AWS Provisioning     | This builds the whole environment on AWS. It creates the servers, creates the virtual private network and configures the network access rule.   |  
+| Create Test User     | Creates a set of 6 users for test purposes. | 
+| Deploy IAM Linux     | Configures the HAProxy Server as well as all the components on the IAM Server.      | 
+| Deploy IAM Windows   | Creates a new AD Forest on the Windows Domain Controller and also creates a set of test users.       | 
+| Deploy Portal        | Installs the node and mongo components on the Portal Server. Also performs the data migration needed for the portal database.        | 
+
+
+
+
 Given that end state, to achieve it the following Teamcity tasks need to be run in the order below. At the end of which should be a functioning DigitalTulip environment
 
 ![alt text](/Images/DeploymentFlow.png)
