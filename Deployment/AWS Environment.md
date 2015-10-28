@@ -37,7 +37,7 @@
 
 5) ssh onto the server using “ubuntu@52.31.33.173” as the user. Full command example: ssh -i /Users/Xaoilin/.ssh/TeamCityKey.pem ubuntu@52.31.33.173
 
-# BACKUP TEAMCITY
+# Backup TeamCity
 
 1) Log onto TeamCity and go to Administration on the top right
 
@@ -45,7 +45,7 @@
 
 3) Copy that file from local machine to remote TeamCity server you just created in /home/ubuntu
 
-# INSTALL TEAMCITY
+# Install TeamCity
 
 1) Run the following command in the ubuntu server you have connected to: wget http://download.jetbrains.com/teamcity/TeamCity-9.0.3.tar.gz
 
