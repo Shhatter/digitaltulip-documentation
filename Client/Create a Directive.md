@@ -11,7 +11,7 @@
 
 # Introduction
 
-Directives are a powerfull part of the Angular js package. It allows for the creation of reusable functionality in a website. Many websites consist of repetitive elements that are included on multiple pages, for instance a navigation bar. Pasting the same html for each page would srart to become unmanagable, especially when implementing big changes.  
+Directives are a powerful part of the Angular js package. It allows for the creation of reusable functionality in a website. Many websites consist of repetitive elements that are included on multiple pages, for instance a navigation bar. Pasting the same html for each page would srart to become unmanagable, especially when implementing big changes.  
 
 Directives allow you to place html and javascript code in a single location and call it using a single tag. 
 
