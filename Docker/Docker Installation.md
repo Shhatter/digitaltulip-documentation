@@ -9,7 +9,7 @@ This documents provides step to step instructions on how to install and conigure
 Before proceeding, ensure that the following have been installed
 
 * Oracle Virtual Box 4.3 *IMPORTANT*. Can be found by going to https://www.virtualbox.org/wiki/Download_Old_Builds_4_3 There have been issues with configuring Docker with version 5. 
-* Docker toolbox. Install from https://www.docker.com/docker-toolbox. NOTE untick the Virtual Box option when prompted.
+* Docker toolbox. Install from https://www.docker.com/docker-toolbox. NOTE untick the Virtual Box option & git option when prompted.
 * Gitbash 1.9.5 - Newer versions use mintty, which isn't compatable with some elements of docker.
 
 ##The Process
