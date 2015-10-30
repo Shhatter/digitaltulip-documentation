@@ -53,35 +53,47 @@ Here is the full list of repositories related to the digital tulip fipbanking ap
 
 ###digitaltulip-portal
 Consumer portal for digital tulip
+https://github.com/atosorigin/digitaltulip-portal
 
 ###fip_banking_node
 Contains the source code for my finance pal
+https://github.com/atosorigin/fip_banking_node
 
 ###digitaltulip-iam-windows
 Creates active directory instance that connects to the iam-linux
+https://github.com/atosorigin/digitaltulip-iam-windows
 
 ###digitaltulip-iam-linux
 Forgerock digital tulip deployment
+https://github.com/atosorigin/digitaltulip-iam-linux
 
 ###digitaltulip-documentation
 Contains the documentation for my finance pal
+https://github.com/atosorigin/digitaltulip-documentation
 
 ###fip_cv_demo
 Creative virtual for DCX
+https://github.com/atosorigin/fip_cv_demo
 
 ###digitaltulip-aws
 Launches the amazon web services servers for digital tulip
+https://github.com/atosorigin/digitaltulip-aws
 
 ###aws_provisioning
 Launches the amazon web services servers for fip_banking
+https://github.com/atosorigin/aws_provisioning
 
 ###fip_banking_cv
 Contains the creative virtual build script (linux)
+https://github.com/atosorigin/fip_banking_cv
 
 ###fip_banking_bb
 Contains backbase source code
+https://github.com/atosorigin/fip_banking_bb
 
 ###fip_doc
 Contains backbase related documentation
+https://github.com/atosorigin/fip_doc
 
 ###fip_backbase
+https://github.com/atosorigin/fip_backbase
