@@ -14,15 +14,15 @@ First things first, is to look at the [Readme File](https://github.com/atosorigi
 You've seen the code, you like the code, you've thought of an enhancement or you've seen an enhancement. You want to change something. How do you do it?
 
 ###1 - Branch the master
-`git checkout -b <<my_new_branch>>
+`git checkout -b <<my_new_branch>>`
 
 ###2 - Make your changes and test
-`gulp test
+`gulp test`
 
 ###3 - If the tests and you've added new tests
-`git add .
-`git commit -m 'my amazing new feature'
-`git push
+`git add .`
+`git commit -m 'my amazing new feature'`
+`git push`
 
 ###4 - Create a pull request
 https://help.github.com/articles/creating-a-pull-request/

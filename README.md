@@ -18,6 +18,10 @@ Provides both High and Detailed level Architecture for the Digital Tulip solutio
 1. [Digital Tulip Software Architecture](/Architecture/digitaltulipsoftwarearchitecture.md)
 2. [Digital Consumer experience Software Architecture](/Architecture/dcxsoftwarearchitecture.md)
 
+###The Way We Work
+1. [Way we work](/WayWeWork/WayWeWork.md)
+
+
 ###Client
 
 Discusses any client side related development. 
