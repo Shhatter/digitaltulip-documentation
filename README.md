@@ -52,34 +52,36 @@ Provides information for all types of Testing carried out.
 Here is the full list of repositories related to the digital tulip fipbanking app.
 
 ###digitaltulip-portal
-consumer portal for digital tulip
+Consumer portal for digital tulip
 
 ###fip_banking_node
-contains the source code for my finance pal
+Contains the source code for my finance pal
 
 ###digitaltulip-iam-windows
-creates active directory instance that connects to the iam-linux
+Creates active directory instance that connects to the iam-linux
 
 ###digitaltulip-iam-linux
-forgerock digital tulip deployment
+Forgerock digital tulip deployment
 
 ###digitaltulip-documentation
-contains the documentation for my finance pal
+Contains the documentation for my finance pal
 
 ###fip_cv_demo
+Creative virtual for DCX
 
 ###digitaltulip-aws
+Launches the amazon web services servers for digital tulip
 
 ###aws_provisioning
-launches the amazon web services servers for digital tulip
+Launches the amazon web services servers for fip_banking
 
 ###fip_banking_cv
-contains the creative virtual 
+Contains the creative virtual build script (linux)
 
 ###fip_banking_bb
-contains backbase source code
+Contains backbase source code
 
 ###fip_doc
-contains backbase related documentation
+Contains backbase related documentation
 
 ###fip_backbase
