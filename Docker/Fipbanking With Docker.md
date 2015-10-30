@@ -8,11 +8,7 @@ Before beginning this stage, please ensure you have completed either the "Docker
 In your existing Gulp (from the previous stage) Navigate to the digital tulip repository, and ensure you are on the dockerise branch - navigate to the client folder and run npm install.
 When this is complete navigate to the server folder and run npm install here too. This fetches all the libraries required to run my finance pal.
 
-open up a second gitbash, and run mongod.
-
-open up a third gitbash, navigate to the repository again, and this time run gulp. This is likely to open a website that will display an error, and loop infinately - press CTRL + C to end the process.
-
-in the original gitbash navigate to the database folder, and run the command "docker build -t fipbankingdb . " followed by "docker run -d -P --name db fipbankingdb" This creates & runs our database instance.
+in gitbash navigate to the database folder, and run the command "docker build -t fipbankingdb . " followed by "docker run -d -P --name db fipbankingdb" This creates & runs our database instance. Note that if the output looks odd you can type "clear" to tidy it.
 
 to build our server instance - navigate to the server folder, and run the command "docker build -t fipbankingapi ." followed by 
 "docker run -d -P --name api --link db:db fipbankingapi".
