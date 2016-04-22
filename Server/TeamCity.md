@@ -2,7 +2,7 @@
 
 The TeamCity instance is located on https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Instances:sort=instanceState after logging in
 
-With the IP address handy, navigate to the URL: <IP Address>:8111
+With the IP address handy, navigate to the URL: (IP Address):8111
 
 You will be able to login to TeamCity with username in the format of: <first name><initial of last name> e.g. The user John Smith has the username: Johns
 
